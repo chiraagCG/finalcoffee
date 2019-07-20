@@ -1,0 +1,65 @@
+.div1{
+    width: cover;
+	height: 600px;
+	border: 5px solid white;
+    padding: 5px;
+    margin: 5px;
+	background-color: white;
+
+}
+.div2{
+	width: cover;
+	height: 500px;
+	border: 5px solid white;
+    padding: 5px;
+    margin: 5px;
+	background-image: url(4k-wallpaper-architecture-background-1308624.jpg);
+}
+.div3{
+    width: cover;
+	height: 450px;
+	border: 5px solid white;
+    padding: 5px;
+    margin: 5px;
+	background-color: white;
+
+}
+.div4{
+	width: 300px;
+	height: 300px;
+	border: 3px solid white; 
+	margin-left: 30px;
+	margin-top: 30px;
+}
+.div5{
+	width: 300px;
+	height: 300px;
+	border: none; 
+	margin-left: 350px;
+	margin-top: -310px;
+
+}
+.div6{
+	width: 300px;
+	height: 300px;
+	border: 3px solid white; 
+	margin-left: 650px;
+	margin-top: -310px;
+
+}
+.div7{
+	width: 300px;
+	height: 300px;
+	border: 3px solid white; 
+	margin-left: 950px;
+	margin-top: -310px;
+}
+.div8{
+	width: cover;
+	height: 300px;
+	border: none;
+    padding: 5px;
+    margin: 5px;
+	background-image: url(aerial-beverage-caffeine-972533.jpg);
+
+}

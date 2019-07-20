@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reservation</title>
+</head>
+<style type="text/css">
+	body{
+		background-image: url(architecture-business-coffee-2199190.jpg);
+	}
+	.num1{
+		 width: 500px;
+	height: 600px;
+	border: 5px solid black;
+    padding: 5px;
+    margin: 5px;
+	background-color: #e6f3ff;
+
+	}
+	  p{
+            margin-left: 100px;
+            margin-top: 50px;
+            float: left;
+            opacity: 0.7;
+            
+        }
+        .user{
+               border-bottom: 1px solid grey;
+            border-left-style: none;
+            border-top-style: none;
+            border-right-style: none;
+            margin-top: 50px;
+            margin-left:15px;
+            width:300px;
+        }
+          button{
+            width:120px;
+            height:50px;
+            border-radius: 40px;
+            background-color: #ff8566;
+            border-style: none;
+            color:white;
+            margin-right: 200px;
+            margin-top: 20px;
+            
+        }
+        button:hover{
+            
+            background-color: burlywood;
+            color:black;
+            cursor: pointer;
+        }
+</style>
+<body>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBUOQuQlI6zI3G_gYfVmAiEvondaqgDZgM",
+    authDomain: "new1-9037c.firebaseapp.com",
+    databaseURL: "https://new1-9037c.firebaseio.com",
+    projectId: "new1-9037c",
+    storageBucket: "",
+    messagingSenderId: "980831689816",
+    appId: "1:980831689816:web:b4326886dd2fca53"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+	<center>
+	<h1 style="color:#ff8566;font-size: 50">• RESERVATION FORM • </h1></center>
+	<center>
+	<div class="num1">
+		<p> Your Name</p><input type="text" placeholder="Entername" id="a1" class="user"><br><br>
+		<p> Email</p><input type="text" placeholder="Enter Email" id="b1" class="user"><br><br>
+		<p> Contact</p><input type="num" placeholder="Enter Contact" id="c1" class="user"><br><br>
+		<p> Seat</p><input type="num" placeholder="No. of seats" id="d1" class="user"><br><br>
+		<button style="margin-left: 200px" onclick="fun()">Reserve</button>
+	</div>
+	</center>
+</body>
+ <script type="text/javascript">
+    function fun() {
+     var a= document.getElementById("a1").value;
+    var b= document.getElementById('b1').value;
+    var c= document.getElementById('c1').value;
+     var d= document.getElementById('d1').value;
+   
+
+
+
+         console.log(a);
+     console.log(b);
+     console.log(c);
+     console.log(d);
+     
+      if (a=="") {
+        alert("enter your name");
+      }
+      else if(b=="") {
+        alert("enter your Email");
+      }
+
+    
+else if(c=="") {
+        alert("enter your phone no.");
+      }
+       else if(c.length<10){
+
+
+     	alert("Please enter valid no.");
+     }
+      else if(d=="") {
+        alert("Enter no.of seats");
+      }
+    
+      else {
+        alert("thanku")
+
+
+         firebase.database().ref('users').push({
+          "Name":a,
+          "Emailt":b,
+          "Contact":c,
+          "Seat":d
+          
+  });
+      }
+       //push the values in database
+         
+          }
+
+       </script>
+</html>
