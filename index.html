@@ -3,8 +3,9 @@
 <head>
 	<title>cafe house</title>
 	<link rel="stylesheet" type="text/css" href="new1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<style>
+<style media="screen">
 	ul {
   list-style-type: none;
   margin: 0;
@@ -79,11 +80,96 @@ tr:nth-child(odd) {
   background-color:  black;
   color: white;
 }
+@media(max-width:600px){
+
+
+.div1{
+  width: 90%;
+height:1200px;
+margin-left: 10px;
+
+}
+
+p{
+  color:blue;
+  width:80%;
+  margin-left: 10px;
+}
+.im{
+
+  width:200px;
+  height: 200px;
+  margin-top: 20px;
+  
+}
+.im1{
+
+  width:200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.p1{
+  color: white;
+  margin-left:40px;
+  background-color: black;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+.div2{
+width: 100%;
+height: 900px;
+
+margin-left:-1px;
+}
+body{
+  overflow-x: hidden;
+}
+.div3{
+  height: 1500px;
+}
+.div4{
+  width: 80%;
+  height: 350px;
+}
+.div5{
+  margin-left: -1px;
+  margin-top: -30px;
+}
+.div6{
+  margin-left: -1px;
+  margin-top: 30px;
+}
+.div7{
+  margin-left: -1px;
+  margin-top: 30px;
+}
+.head1{
+
+margin-left: 70px;
+}
+.button1{
+  margin-left:40px;
+}
+}
+
 .footer{
   height: 200px;
   width: 100%;
   background-color: black;
   opacity: 0.7;
+}
+@media(max-width: 600px){
+
+  .footer{
+    width: 100%;
+    height: 200px;
+  }
+  .facebook{
+    float: left;
+    margin-right: -100px;
+  }
+
 }
 </style>
 <body>
@@ -95,20 +181,20 @@ tr:nth-child(odd) {
   <li><a href="#Contact">Contact</a></li>
 </ul>
 <center>
-<h1 style="color:#ff8566;font-size: 50">•ELITE COFFEE BRANDS•</h1>
-<p style="font-size: 25 ">Coffee Shop is the place where you can get flavorful coffee strains from</p>
-<p style="font-size: 25 ">global elite brands and roasters at very affordable price.</p> 
+<h1 style="color:#ff8566;font-size: 50px" class="head1">•ELITE COFFEE BRANDS•</h1>
+<p style="font-size: 25 " class="p1">Coffee Shop is the place where you can get flavorful coffee strains from</p>
+<p style="font-size: 25 " class="p1">global elite brands and roasters at very affordable price.</p> 
 <a href="ourteam.html"><button class="button button1">About us</button></a>
 </center><br>
 <div class="div1">
 	<center>
-	<h2 style="color:#ff8566;font-size: 30">•SMALL CAFE IN THE HEART OF CITY!• </h2>
+	<h2 style="color:#ff8566;font-size: 30px" class="cafe1">•SMALL CAFE IN THE HEART OF CITY!• </h2>
 	<p style="font-size: 20 ">We are proud of our coffee shop with the highest-quality products, most inviting </p>
     <p style="font-size: 20">stores, friendliest staff and the best coffee in the world.</p>
 	</center>
-    <img style="margin-left: 50px" src="mt-1017-home-img05.jpg">
-	<img src="mt-1017-home-img06.jpg">
-	<img src="mt-1017-home-img07.jpg">
+    <img style="margin-left: 50px" src="mt-1017-home-img05.jpg" class="im">
+	<img src="mt-1017-home-img06.jpg" class="im1">
+	<img src="mt-1017-home-img07.jpg" class="im1">
 	<center>
 	<p style="font-size: 20">Who we are and our coffee</p>
 	<p style="font-size: 20">To know, do visit our shop</p>
@@ -224,11 +310,11 @@ function carousel() {
 	</div>
   <center> <h1 style="color: #ff8566" id="Contact">CONTACT</h1></center>
    <div class="footer">
-    <img style="margin-left:400px;margin-top: 25px" src="icons8-facebook-64.png">
-    <img style="margin-left: 100px;margin-top: 25px" src="icons8-google-plus-64.png">
-    <img style="margin-left: 100px;margin-top: 25px" src="icons8-twitter-64.png">
-    <img style="margin-left: 100px;margin-top: 25px" src="icons8-play-button-40.png">
-    <img style="margin-left: 100px;margin-top: 25px" src="icons8-phone-64.png">
+    <img style="margin-left:400px;margin-top: 25px" src="icons8-facebook-64.png" class="facebook">
+    <img style="margin-left: 100px;margin-top: 25px" src="icons8-google-plus-64.png" class="google">
+    <img style="margin-left: 100px;margin-top: 25px" src="icons8-twitter-64.png" class="twitter">
+    <img style="margin-left: 100px;margin-top: 25px" src="icons8-play-button-40.png" class="play">
+    <img style="margin-left: 100px;margin-top: 25px" src="icons8-phone-64.png" class="phone">
     <p style="color: white;margin-left:1050px ">7986761892</p>
    </div>
 </body>

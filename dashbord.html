@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBUOQuQlI6zI3G_gYfVmAiEvondaqgDZgM",
+    authDomain: "new1-9037c.firebaseapp.com",
+    databaseURL: "https://new1-9037c.firebaseio.com",
+    projectId: "new1-9037c",
+    storageBucket: "",
+    messagingSenderId: "980831689816",
+    appId: "1:980831689816:web:b4326886dd2fca53"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<head>
+	<title>dashbord</title>
+</head>
+<body>
+	<table>
+
+<thead>
+<tr>
+<td>Name</td>
+<td>Email</td>
+<td>Contact</td>
+<td>Seat</td>
+
+
+</tr>
+</thead>
+<tbody id="detail">
+</tbody>
+</table>
+</body>
+<script>
+$(document).ready(function(){
+
+  var rootRef=firebase.database().ref().child("users");
+  rootRef.on("child_added",snap=>{
+
+          var name = snap.child("Name").val();
+          var email = snap.child("Email").val();
+          var contact = snap.child("Contact").val();
+          var seat = snap.child("Seat").val();
+    
+          $("#detail").append("<tr><td>" + name +"</td><td>" + email +"</td><td>" + contact +"</td><td>" + seat +"</td></tr>");
+           });
+});
+</script>
+
+</body>
+</html>
