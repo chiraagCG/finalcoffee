@@ -1,5 +1,5 @@
-
 <html>
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
@@ -21,6 +21,9 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <body>
     <center>
 
@@ -28,7 +31,7 @@
 <html>
 <body>
 
-<h2>Basic HTML Table</h2>
+<h2>DASHBOARD</h2>
 
 <table style="width:70%;border:2px solid black;">
 
@@ -37,8 +40,9 @@
     <th style="border:2px solid black;">Email</th> 
     <th style="border:2px solid black;">Contact</th>
     <th style="border:2px solid black;">Seat</th>
+  
   </tr>
-<tbody id="table_body" style="style="border:2px solid black;">
+<tbody id="table_body" style="border:2px solid black;">
   </tbody>
 </table>
 
@@ -59,12 +63,14 @@ $(document).ready(function(){
     rootRef.on("child_added",snap =>{
           
   var name= snap.child("Name").val();
-  var email=snap.child("Emailt").val();
-var contact=snap.child("Contact").val();
-var seat=snap.child("Seat").val();
+  var email= snap.child("Emailt").val(); 
+  var contact= snap.child("Contact").val();
+  var seat= snap.child("Seat").val();
+  ;
+ 
 
          
-        $("#table_body").append("<tr><td>" + name +"</td><td>" + email +"</td><td>" + contact +"</td><td>" + seat + "</td></tr>"); 
+        $("#table_body").append("<tr><td>" + name + "</td><td>"+ email +"</td><td>" + contact + "</td><td>" + seat + "</td></tr>"); 
 });
 
 
